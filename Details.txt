@@ -1,0 +1,96 @@
+
+
+Topics:
+
+  Events:
+    keyboard events and attibutes
+
+      1. keydown
+      2. keypress
+      3. keyup
+
+    Example Task:
+    Count backwards from 10 to 1, then say Happy Valentine's Day
+      using setTimeout and setInterval without callback
+
+    table creation
+
+    id, class, nested structure, keys to pass test case 
+
+    Discussion for Task
+      Pagination:
+        
+      calculator:
+        use eval for infx expresiion valuation
+        eval('2+2*(2)');
+
+      Form: 
+        1. How to take form values to JS ( .value for an input element)
+        2. how to pass test cases
+  
+  Callback
+
+    callback function ---> a function reference/definition which is used an arguement to another function to execute a set of statements
+
+    sync operations exectution:
+      Eg: forEach, map, filter, find
+
+    async operations execution ( operation running in background )
+      Eg: setTimout ( wait for sometime to execute )
+          setInterval ( executes frequently after certain interval )
+          element.addEventListner(type, listern: callback);
+
+    Javascript is a single thread 
+    
+    async operations are put into a queue after the wait time/ or completion of action.
+    then js grabs them from the callback queue for execution
+
+    use & purpose of the callback
+
+    callback advantages:
+      1. Modularity / Reusability
+      2. To keep track when to execute what statements as a callback in a asynchronous operation
+
+      asynchronous operation always go for named callback function to keep track
+
+    pain of callback
+      Callback Hell: Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code
+  
+  Error Handling:
+    what is an error? ---> syntax, typeerror
+    when does an error occur?
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+    try --> block of Codes which prone to throw an error
+    catch --> catches error occured on try block
+    finally --> executes after try/catch ( used for some cleanup or msg display purpose )
+
+    CustomError and Throwing error messages
+
+Next Session:
+
+  Promise:
+    Object to understand the completion(or failure) of an asynchronous event/operation
+
+    MDN-> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+    State:
+      pending --->  initial state, neither fulfilled(success) nor rejected(failure).
+
+      fullfilled ---> meaning that the operation was completed successfully with a value
+
+      rejected ---> meaning that the operation failed with a reason
+
+    methods:
+      then ---> executed when the promise is fullfilled/resolved
+      catch ---> executed when the promise is rejected/unfullfilled
+    
+    Chaining --> returning an promise from resolvement in parent promise
+      execution time --> sum of time taken by all promise chains
+    All --> Independent Promise triggered simultaneously/parallel
+      execution: Maximum time among promises
+    Any --> trigger independent promises
+      resolve is success when any one is resolved
+
+  Fetch & then
+    Fetch -> Interface to make an api call
+      then ---> response --> convert response to json -> promsie .then (json -> operation on json)
